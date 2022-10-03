@@ -1,0 +1,26 @@
+@import "./scss/normalize";
+@import "./scss/variables";
+@import "./scss/components/all";
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container {
+  max-width: 1301px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  color: #0b1b28;
+  flex: 1 0 auto;
+}

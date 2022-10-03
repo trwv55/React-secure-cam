@@ -1,0 +1,70 @@
+@import "../variables";
+
+.overlay {
+  // position: fixed;
+  left: 0;
+  max-height: 693px;
+  max-width: 1921px;
+  height: 100%;
+  width: 100%;
+  background-image: url(./assets/images/bc-b2b.png);
+  background-repeat: no-repeat;
+
+  .main {
+    margin-bottom: 815px;
+
+    .consult {
+      margin-bottom: 120px;
+      .links {
+        padding-top: 168px;
+        a {
+          font-weight: 500;
+          font-size: 22px;
+          line-height: 105%;
+          color: #ffffff;
+          opacity: 0.5;
+          cursor: pointer;
+        }
+        #active {
+          opacity: 1;
+          margin-left: 61px;
+          border-bottom: 1px solid #ffffff;
+          padding-bottom: 4px;
+        }
+      }
+      .title {
+        margin-top: 43px;
+        h1 {
+          font-weight: 600;
+          font-size: 50px;
+          line-height: 105%;
+          color: #ffffff;
+        }
+      }
+      .text {
+        margin-top: 52px;
+        p {
+          font-weight: 500;
+          font-size: 22px;
+          line-height: 105%;
+          color: #ffffff;
+        }
+      }
+      .button {
+        margin-bottom: 171px;
+        width: 352px;
+        height: 54px;
+        color: #ffffff;
+        background-color: #212121;
+        border: none;
+        border-radius: 2px;
+        margin-top: 55px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.main-choose {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
