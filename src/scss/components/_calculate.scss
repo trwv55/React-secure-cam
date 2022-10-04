@@ -1,0 +1,48 @@
+.customer {
+  margin-top: 500px;
+}
+.calculate {
+  h3 {
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 120%;
+  }
+  p {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    color: #5082f4;
+  }
+  .form-wrapper {
+    display: flex;
+    flex-direction: row;
+    .checkbox-form {
+      .checkbox-wrapper {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 47px;
+        .checkbox {
+          margin-right: 50px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          .input {
+            width: 24px;
+            height: 24px;
+            border: 1px solid #aab0bd;
+            border-radius: 3px;
+            margin-right: 10px;
+          }
+          .label {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 100%;
+            color: #333333;
+          }
+        }
+      }
+    }
+  }
+}

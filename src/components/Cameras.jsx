@@ -86,15 +86,17 @@ const Cameras = () => {
             freeMode={true}
             watchSlidesProgress={true}
             modules={[FreeMode, Navigation, Thumbs]}
-            className='mySwiper block'>
+            className='mySwiper'>
             {CameraGoods.map((item) => (
               <SwiperSlide key={item.id}>
-                <img className='img-main' src={item.icon} />
-                <div class='block-info'>
-                  <h5 class='title'>{item.title}</h5>
-                  <h5 class='decs'>{item.desc}</h5>
-                  <span>{item.span}</span>
-                  <h4 class='price'>{item.price}</h4>
+                <div className='block'>
+                  <img className='img-main' src={item.icon} />
+                  <div class='block-info'>
+                    <h5 class='title'>{item.title}</h5>
+                    <h5 class='decs'>{item.desc}</h5>
+                    <span>{item.span}</span>
+                    <h4 class='price'>{item.price}</h4>
+                  </div>
                 </div>
               </SwiperSlide>
             ))}

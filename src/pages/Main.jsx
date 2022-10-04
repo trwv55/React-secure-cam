@@ -3,6 +3,7 @@ import Choose from "../components/Choose";
 import Modal from "../components/Modal";
 import Carousel from "../components/Carousel";
 import Cameras from "../components/Cameras";
+import Calculate from "../components/calculate/Calculate";
 
 const Main = () => {
   return (
@@ -34,6 +35,7 @@ const Main = () => {
       </div>
       <Carousel />
       <Cameras />
+      <Calculate />
     </>
   );
 };
