@@ -1,6 +1,8 @@
 import React from "react";
 import Choose from "../components/Choose";
 import Modal from "../components/Modal";
+import Carousel from "../components/Carousel";
+import Cameras from "../components/Cameras";
 
 const Main = () => {
   return (
@@ -27,10 +29,11 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <Modal />
       <div className='container main-choose'>
         <Choose />
       </div>
+      <Carousel />
+      <Cameras />
     </>
   );
 };
