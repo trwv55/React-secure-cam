@@ -4,6 +4,9 @@ import Modal from "../components/Modal";
 import Carousel from "../components/Carousel";
 import Cameras from "../components/Cameras";
 import Calculate from "../components/calculate/Calculate";
+import Banner from "../components/Banner";
+import VideoReg from "../components/VideoReg";
+import Map from "../components/Map";
 
 const Main = () => {
   return (
@@ -36,6 +39,9 @@ const Main = () => {
       <Carousel />
       <Cameras />
       <Calculate />
+      <Banner />
+      <VideoReg />
+      <Map />
     </>
   );
 };

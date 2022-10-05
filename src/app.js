@@ -4,6 +4,7 @@ import styles from "./styles.scss";
 import "./styles.scss";
 import Header from "./components/Header";
 import Main from "./pages/main";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -13,6 +14,9 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Main />} />
         </Routes>
+      </div>
+      <div className='footer'>
+        <Footer />
       </div>
     </div>
   );

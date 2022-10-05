@@ -1,0 +1,69 @@
+@import "../../../scss/mixins.scss";
+
+.result {
+  background: #ffffff;
+  box-shadow: 0px 0px 50px rgba(45, 48, 54, 0.15);
+  border-radius: 2px;
+  margin-left: 245px;
+  position: relative;
+  min-width: 345px;
+  margin-bottom: 140px;
+  .info {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 37px 48px;
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: capitalize;
+      color: #aab0bd;
+      margin-bottom: 14px;
+    }
+    h4 {
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 46px;
+      padding-right: 202px;
+    }
+  }
+  .row__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-left: 48px;
+    margin-bottom: 42px;
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .title {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #aab0bd;
+        margin-top: 24px;
+      }
+      .number {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 24px;
+        margin-right: 45px;
+      }
+    }
+  }
+  .result__btn {
+    @include btn-blue;
+    margin-left: 50px;
+    margin-bottom: 56px;
+  }
+  .footnote {
+    position: absolute;
+    bottom: -40px;
+    left: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #8b98a7;
+  }
+}
