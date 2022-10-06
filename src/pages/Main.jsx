@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Choose from "../components/Choose";
 import Modal from "../components/Modal";
-import Carousel from "../components/Carousel";
+import CarouselCom from "../components/CarouselCom";
 import Cameras from "../components/Cameras";
 import Calculate from "../components/calculate/Calculate";
 import Banner from "../components/Banner";
@@ -15,7 +16,9 @@ const Main = () => {
         <div className='main'>
           <div className='container consult'>
             <div className='links'>
-              <a className='nuxt-link-active'>Для меня</a>
+              <Link to='/b2c' className='nuxt-link-active'>
+                Для меня
+              </Link>
               <a to='/' id='active'>
                 Для бизнеса
               </a>
@@ -36,9 +39,11 @@ const Main = () => {
       <div className='container main-choose'>
         <Choose />
       </div>
-      <Carousel />
+      <CarouselCom />
       <Cameras />
-      <Calculate />
+      <div className='main-calculate'>
+        <Calculate />
+      </div>
       <Banner />
       <VideoReg />
       <Map />

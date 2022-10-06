@@ -1,7 +1,7 @@
 .footer {
   margin-top: 85px;
   background-color: #202427;
-  padding-bottom: 99px;
+  padding-bottom: 39px;
   .row-wrapper {
     display: flex;
     flex-direction: row;
@@ -12,6 +12,11 @@
     border-bottom: 1px solid #36393c;
     .col {
       color: #fff;
+      .footer-socials {
+        a {
+          padding-right: 15px;
+        }
+      }
       .note {
         font-weight: 400;
         font-size: 12px;
@@ -41,10 +46,11 @@
         line-height: 20px;
       }
       .row3 {
-        margin-top: 59px;
+        padding-top: 59px;
         margin-bottom: 23px;
       }
     }
+
     .col-wrapper {
       display: flex;
       flex-direction: row;

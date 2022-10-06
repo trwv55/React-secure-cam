@@ -9,16 +9,25 @@ import { FreeMode, Navigation, Thumbs } from "swiper";
 import { CameraGoods } from "../data/camerasGoods";
 
 const Cameras = () => {
+  const [currentCameraGoods, setCurrentCameraGoods] = useState(CameraGoods);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [list, setList] = useState([
+    { key: "all", name: "Все" },
+    { key: "inside", name: "Внутренние" },
+    { key: "outside", name: "Уличные" },
+  ]);
   return (
     <div className='goods'>
       <div className='container'>
         <h3>Камеры видеонаблюдения</h3>
         <div className='links'>
-          <a className='active' href='#'>
-            Внутренние
-          </a>
-          <a href='#'>Уличные</a>
+          <ul>
+            {list.map((item) => (
+              <li key={item.key} className='active'>
+                {item.name}
+              </li>
+            ))}
+          </ul>
         </div>
         <div className='goods__camera'>
           <Swiper
@@ -31,7 +40,7 @@ const Cameras = () => {
             modules={[FreeMode, Navigation, Thumbs]}
             className='mySwiper2 goods__camera'>
             <div className='blocks'>
-              {CameraGoods.map((item) => (
+              {currentCameraGoods.map((item) => (
                 <SwiperSlide key={item.id}>
                   <img className='img-main' src={item.icon} />
 

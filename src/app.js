@@ -4,6 +4,7 @@ import styles from "./styles.scss";
 import "./styles.scss";
 import Header from "./components/Header";
 import Main from "./pages/main";
+import Customer from "./pages/Customer";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
       <div className='content'>
         <Routes>
           <Route path='/' element={<Main />} />
+          <Route path='b2c' element={<Customer />} />
         </Routes>
       </div>
       <div className='footer'>

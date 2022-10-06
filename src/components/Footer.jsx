@@ -1,4 +1,8 @@
 import React from "react";
+import Vk from "../assets/images/footer/vk.svg";
+import Inst from "../assets/images/footer/inst.svg";
+import Wh from "../assets/images/footer/wh.svg";
+import Tg from "../assets/images/footer/tg.svg";
 
 const Footer = () => {
   return (
@@ -6,7 +10,21 @@ const Footer = () => {
       <div class='container'>
         <div class='row-wrapper'>
           <div class='col col1'>
-            <img src='images/footer-socials.svg' alt='' />
+            <div className='footer-socials'>
+              <a href='https://vk.com/' target='_blank'>
+                <img src={Vk} alt='' />
+              </a>
+              <a href='https://www.instagram.com/' target='_blank'>
+                <img src={Inst} alt='' />
+              </a>
+              <a href='https://wa.me/79200000000' target='_blank'>
+                <img src={Wh} alt='' />
+              </a>
+              <a href='https://telegram.me/vitaliitrw' target='_blank'>
+                <img src={Tg} alt='' />
+              </a>
+            </div>
+
             <p class='note'>
               Продолжая использовать наш сайт, вы даете <br />
               согласие на обработку файлов Cookies и других <br />
@@ -20,7 +38,7 @@ const Footer = () => {
                 8(8888)888-000
               </a>
               <p class='row2 phone'>телефон</p>
-              <a class='row3 video' href='#'>
+              <a class='row3' href='#'>
                 Видеонаблюдение
               </a>
               <a class='row4 fire' href='#'>

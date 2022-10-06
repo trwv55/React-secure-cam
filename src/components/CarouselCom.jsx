@@ -22,7 +22,6 @@ export const carouselData = [
 ];
 
 const CarouselCom = () => {
-  console.log(carouselData);
   return (
     <div className='save'>
       <div className='container'>
