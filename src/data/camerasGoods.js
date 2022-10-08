@@ -12,6 +12,7 @@ export const CameraGoods = [
     desc: "IP-видеокамера поворотная",
     span: "EZVIZ",
     price: "6 990 P",
+    category: "inside",
   },
   {
     id: 1,
@@ -20,6 +21,7 @@ export const CameraGoods = [
     desc: "IP-видеокамера",
     span: "EZVIZ",
     price: "5 990 P",
+    category: "inside",
   },
   {
     id: 2,
@@ -28,6 +30,7 @@ export const CameraGoods = [
     desc: "IP-видеокамера",
     span: "EZVIZ",
     price: "5 699 P",
+    category: "inside",
   },
   {
     id: 3,
@@ -36,6 +39,7 @@ export const CameraGoods = [
     desc: "HD-TVI видеокамера",
     span: "HiWatch",
     price: "4 630 P",
+    category: "outside",
   },
   {
     id: 4,
@@ -44,5 +48,6 @@ export const CameraGoods = [
     desc: "IP-видеокамера",
     span: "IMOU",
     price: "8 690 P",
+    category: "outside",
   },
 ];

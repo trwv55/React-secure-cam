@@ -16,14 +16,30 @@ const Cameras = () => {
     { key: "inside", name: "Внутренние" },
     { key: "outside", name: "Уличные" },
   ]);
+  const [activeItem, setActiveItem] = useState(0);
+
+  const categoreHandler = (name, i) => {
+    setActiveItem(i);
+    if (name === "inside" || name === "outside") {
+      setCurrentCameraGoods(CameraGoods.filter((el) => el.category === name));
+    }
+    if (name === "all") {
+      setCurrentCameraGoods(CameraGoods);
+    }
+    return;
+  };
+
   return (
     <div className='goods'>
       <div className='container'>
         <h3>Камеры видеонаблюдения</h3>
         <div className='links'>
           <ul>
-            {list.map((item) => (
-              <li key={item.key} className='active'>
+            {list.map((item, i) => (
+              <li
+                onClick={() => categoreHandler(item.key, i)}
+                key={item.key}
+                className={activeItem === i ? "active" : ""}>
                 {item.name}
               </li>
             ))}
@@ -91,12 +107,12 @@ const Cameras = () => {
             onSwiper={setThumbsSwiper}
             navigation={true}
             spaceBetween={10}
-            slidesPerView={4}
+            slidesPerView={2}
             freeMode={true}
             watchSlidesProgress={true}
             modules={[FreeMode, Navigation, Thumbs]}
             className='mySwiper'>
-            {CameraGoods.map((item) => (
+            {currentCameraGoods.map((item) => (
               <SwiperSlide key={item.id}>
                 <div className='block'>
                   <img className='img-main' src={item.icon} />

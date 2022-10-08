@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Choose from "../components/Choose";
 import Modal from "../components/Modal";
@@ -8,8 +8,15 @@ import Calculate from "../components/calculate/Calculate";
 import Banner from "../components/Banner";
 import VideoReg from "../components/VideoReg";
 import Map from "../components/Map";
+import ModalMini from "../components/ModalMini";
 
 const Main = () => {
+  const [showModalMini, setShowModalMini] = useState(false);
+
+  const modalMiniHandler = () => {
+    setShowModalMini(true);
+    document.body.style.overflow = "hidden";
+  };
   return (
     <>
       <div className='overlay'>
@@ -32,13 +39,18 @@ const Main = () => {
             <div className='text'>
               <p>Оставьте заявку и получите скидку 15% на первый заказ!</p>
             </div>
-            <button className='button'>Получить консультацию</button>
+            <button onClick={modalMiniHandler} className='button'>
+              Получить консультацию
+            </button>
           </div>
         </div>
       </div>
+
       <div className='container main-choose'>
         <Choose />
       </div>
+      {showModalMini && <ModalMini />}
+
       <CarouselCom />
       <Cameras />
       <div className='main-calculate'>

@@ -38,7 +38,7 @@ const Map = () => {
               src='https://yandex.ru/map-widget/v1/?um=constructor%3A27f0ba5f31524e0dd4cbb339a076f8147dc2eaefcc2e5af2636268732c0eceb1&amp;source=constructor'
               width='750'
               height='480'
-              frameborder='0'></iframe>
+              frameBorder='0'></iframe>
           </div>
         </div>
       </div>
