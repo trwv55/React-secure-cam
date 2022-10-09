@@ -12,6 +12,12 @@ import ModalMini from "../components/ModalMini";
 
 const Main = () => {
   const [showModalMini, setShowModalMini] = useState(false);
+  const [modalWindow, setModalWindow] = useState(false);
+
+  const showModal = () => {
+    setModalWindow(true);
+    document.body.style.overflow = "hidden";
+  };
 
   const modalMiniHandler = () => {
     setShowModalMini(true);
@@ -54,8 +60,9 @@ const Main = () => {
       <CarouselCom />
       <Cameras />
       <div className='main-calculate'>
-        <Calculate />
+        <Calculate showModal={showModal} />
       </div>
+      {modalWindow && <Modal />}
       <Banner />
       <VideoReg />
       <Map />

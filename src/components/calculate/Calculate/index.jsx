@@ -1,7 +1,8 @@
 import React from "react";
 import Form from "../Form";
+import Modal from "../../Modal";
 
-const Calculate = () => {
+const Calculate = ({ showModal }) => {
   return (
     <div>
       <div className='calculate'>
@@ -18,7 +19,7 @@ const Calculate = () => {
                     value=''
                     id='flexCheckDefault'
                   />
-                  <label className='form-check-label label' for='flexCheckDefault'>
+                  <label className='form-check-label label' htmlFor='flexCheckDefault'>
                     Монтаж
                   </label>
                 </div>
@@ -29,12 +30,12 @@ const Calculate = () => {
                     value=''
                     id='flexCheckChecked'
                   />
-                  <label className='form-check-label label' for='flexCheckChecked'>
+                  <label className='form-check-label label' htmlFor='flexCheckChecked'>
                     Full HD камера
                   </label>
                 </div>
               </div>
-              <Form />
+              <Form showModal={showModal} />
             </div>
           </div>
         </div>

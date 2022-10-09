@@ -87,13 +87,16 @@ const Modal = () => {
             </div>
             <div className='form-check'>
               <input type='checkbox' className='form-check-input check-input' id='exampleCheck1' />
-              <label className='form-check-label check-label' for='exampleCheck1'>
+              <label className='form-check-label check-label' htmlFor='exampleCheck1'>
                 Я соглашаюсь на обработку моих
                 <br />
                 персональных данных.
               </label>
             </div>
-            <button type='submit' className='btn btn-primary btn-modal'>
+            <button
+              onClick={() => setModalWindow(false)}
+              type='submit'
+              className='btn btn-primary btn-modal'>
               Оставить заявку
             </button>
           </form>

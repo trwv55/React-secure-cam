@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./form.module.scss";
 import Result from "../Result";
 
-const Form = () => {
+const Form = ({ showModal }) => {
   return (
     <div className={styles.form__wrapper}>
       <form>
@@ -32,7 +32,7 @@ const Form = () => {
           <span>до 10 дней</span>
         </div>
       </form>
-      <Result />
+      <Result showModal={showModal} />
     </div>
   );
 };

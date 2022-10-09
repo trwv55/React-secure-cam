@@ -36,9 +36,31 @@ module.exports = {
         use: ["babel-loader"],
       },
       {
-        test: /\.(scss|css)$/,
-        use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+              modules: {
+                localIdentName: "[local]",
+              },
+            },
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
       },
+
+      // {
+      //   test: /\.(scss|css)$/,
+      //   use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
+      // },
     ],
   },
   resolve: {

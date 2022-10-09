@@ -1,5 +1,5 @@
+import React, { useState } from "react";
 import { Carousel } from "bootstrap";
-import React from "react";
 import { Link } from "react-router-dom";
 import CustomerPng from "../assets/images/customer.png";
 import Choose from "../components/Choose";
@@ -9,8 +9,16 @@ import Banner from "../components/Banner";
 import Calculate from "../components/calculate/Calculate";
 import VideoReg from "../components/VideoReg";
 import Map from "../components/Map";
+import ModalMini from "../components/ModalMini";
 
 const Customer = () => {
+  const [showModalMini, setShowModalMini] = useState(false);
+
+  const modalHandler = () => {
+    setShowModalMini(true);
+    document.body.style.overflow = "hidden";
+  };
+
   return (
     <>
       <div class='container customer'>
@@ -30,7 +38,9 @@ const Customer = () => {
           <div class='customer-text'>
             <p>Оставьте заявку и получите скидку 15% на первый заказ!</p>
           </div>
-          <button class='button'>Получить консультацию</button>
+          <button onClick={modalHandler} class='button'>
+            Получить консультацию
+          </button>
         </div>
         <div class='customer-right'>
           <img src={CustomerPng} alt='' width='600' height='450' />
@@ -39,6 +49,7 @@ const Customer = () => {
       <div className='container main-choose'>
         <Choose />
       </div>
+      {showModalMini && <ModalMini />}
       <CarouselCom />
       <Cameras />
       <Banner />

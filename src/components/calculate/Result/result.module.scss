@@ -1,4 +1,5 @@
 @import "../../../scss/mixins.scss";
+@import "../../../scss/variables.scss";
 
 .result {
   background: #ffffff;
@@ -55,6 +56,9 @@
     @include btn-blue;
     margin-left: 50px;
     margin-bottom: 56px;
+    &:hover {
+      background-color: $btnBlueActive;
+    }
   }
   .footnote {
     position: absolute;

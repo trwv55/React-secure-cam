@@ -6,10 +6,10 @@ import Tg from "../assets/images/footer/tg.svg";
 
 const Footer = () => {
   return (
-    <footer class='footer'>
-      <div class='container'>
-        <div class='row-wrapper'>
-          <div class='col col1'>
+    <footer className='footer'>
+      <div className='container'>
+        <div className='row-wrapper'>
+          <div className='col col1'>
             <div className='footer-socials'>
               <a href='https://vk.com/' target='_blank'>
                 <img src={Vk} alt='' />
@@ -25,35 +25,35 @@ const Footer = () => {
               </a>
             </div>
 
-            <p class='note'>
+            <p className='note'>
               Продолжая использовать наш сайт, вы даете <br />
               согласие на обработку файлов Cookies и других <br />
               пользовательских данных, в соответствии с <br />
               <span id='padding'>Политикой конфиденциальности.</span>
             </p>
           </div>
-          <div class='col-wrapper'>
-            <div class='col col2'>
-              <a class='row1 number' href='tel:8(8888)888-000'>
+          <div className='col-wrapper'>
+            <div className='col col2'>
+              <a className='row1 number' href='tel:8(8888)888-000'>
                 8(8888)888-000
               </a>
-              <p class='row2 phone'>телефон</p>
-              <a class='row3' href='#'>
+              <p className='row2 phone'>телефон</p>
+              <a className='row3' href='#'>
                 Видеонаблюдение
               </a>
-              <a class='row4 fire' href='#'>
+              <a className='row4 fire' href='#'>
                 Пожарная сигнализация
               </a>
             </div>
-            <div class='col col3'>
-              <a href='mailto:info@camera11.ru' class='row1 mail'>
+            <div className='col col3'>
+              <a href='mailto:info@camera11.ru' className='row1 mail'>
                 info@camera11.ru
               </a>
-              <p class='row2 post'>почта</p>
-              <a href='#' class='row3 domof'>
+              <p className='row2 post'>почта</p>
+              <a href='#' className='row3 domof'>
                 Домофония
               </a>
-              <a href='#' class='row4 save'>
+              <a href='#' className='row4 save'>
                 Безопасный дом
               </a>
             </div>

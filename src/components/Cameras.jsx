@@ -60,34 +60,34 @@ const Cameras = () => {
                 <SwiperSlide key={item.id}>
                   <img className='img-main' src={item.icon} />
 
-                  <div class='goods__table'>
+                  <div className='goods__table'>
                     <h4>
                       {item.title} {item.desc}
                     </h4>
-                    <p class='ezviz'>{item.span}</p>
-                    <p class='features'>Характеристики</p>
-                    <div class='table'>
-                      <div class='row'>
+                    <p className='ezviz'>{item.span}</p>
+                    <p className='features'>Характеристики</p>
+                    <div className='table'>
+                      <div className='row'>
                         <span className='title'>Матрица</span>
                         <span className='answer'>2 MPix</span>
                       </div>
-                      <div class='row'>
+                      <div className='row'>
                         <span className='title'>Разрешение видео</span>
                         <span className='answer'>1920x1080</span>
                       </div>
-                      <div class='row'>
+                      <div className='row'>
                         <span className='title'>Ночная съемка</span>
                         <span className='answer'>Есть</span>
                       </div>
-                      <div class='row'>
+                      <div className='row'>
                         <span className='title'>Угол обзора</span>
                         <span className='answer'>132°</span>
                       </div>
-                      <div class='row'>
+                      <div className='row'>
                         <span className='title'>Встроенный микрофон</span>
                         <span className='answer'>Есть</span>
                       </div>
-                      <div class='row'>
+                      <div className='row'>
                         <span className='title'>Wi-Fi</span>
                         <span className='answer'>Есть</span>
                       </div>
@@ -116,11 +116,11 @@ const Cameras = () => {
               <SwiperSlide key={item.id}>
                 <div className='block'>
                   <img className='img-main' src={item.icon} />
-                  <div class='block-info'>
-                    <h5 class='title'>{item.title}</h5>
-                    <h5 class='decs'>{item.desc}</h5>
+                  <div className='block-info'>
+                    <h5 className='title'>{item.title}</h5>
+                    <h5 className='decs'>{item.desc}</h5>
                     <span>{item.span}</span>
-                    <h4 class='price'>{item.price}</h4>
+                    <h4 className='price'>{item.price}</h4>
                   </div>
                 </div>
               </SwiperSlide>

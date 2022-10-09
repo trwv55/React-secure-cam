@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./result.module.scss";
 
-const Result = () => {
+const Result = ({ showModal }) => {
   return (
     <div className={styles.result}>
       <div className={styles.info}>
@@ -20,7 +20,9 @@ const Result = () => {
         </div>
       </div>
 
-      <button className={styles.result__btn}>Оставить заявку</button>
+      <button onClick={() => showModal()} className={styles.result__btn}>
+        Оставить заявку
+      </button>
       <p className={styles.footnote}>
         *Расчет приблизительный и не является публичным договором оферты
       </p>
