@@ -49,7 +49,7 @@ const Main = () => {
       <div className='container main-choose'>
         <Choose />
       </div>
-      {showModalMini && <ModalMini />}
+      {showModalMini && <ModalMini setShowModalMini={setShowModalMini} />}
 
       <CarouselCom />
       <Cameras />
