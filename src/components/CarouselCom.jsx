@@ -9,7 +9,7 @@ import Office from "../assets/images/makeSave/office.svg";
 import Store from "../assets/images/makeSave/store.svg";
 import Parking from "../assets/images/makeSave/parking.svg";
 import Storage from "../assets/images/makeSave/storage.svg";
-import Home from "../assets/images/makeSave/Home.svg";
+import Home from "../assets/images/makeSave/home.svg";
 import Apartment from "../assets/images/makeSave/apartment.svg";
 
 export const carouselData = [
