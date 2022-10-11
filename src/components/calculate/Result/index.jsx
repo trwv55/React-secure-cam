@@ -1,22 +1,25 @@
 import React, { useState } from "react";
 import styles from "./result.module.scss";
 
-const Result = ({ showModal, montage, fullHD }) => {
-  const [total, setTotal] = useState(0);
-
-  const calculate = () => {
-    const cameraPrice = 5990;
-    const dayOfStorage = 450;
-    const montagePrice = 2450;
-    const fullHdPrice = 8990;
-
-    let totalPrice = 0;
+const Result = ({ showModal, checkedValue, numOfCamers, numOfDays }) => {
+  const calculate = (arr1, arr2) => {
+    const data = [];
+    let sum = 0;
+    data.push(arr1);
+    data.push(arr2);
+    sum = data.reduce((sum, i) => (sum += i.count * i.price), 0);
+    if (!checkedValue) {
+      return sum;
+    } else {
+      return (sum += checkedValue);
+    }
   };
+
   return (
     <div className={styles.result}>
       <div className={styles.info}>
         <p>Итого стоимость*</p>
-        <h4 className={styles.price}>15 2706 ₽</h4>
+        <h4 className={styles.price}>{calculate(numOfCamers, numOfDays)} ₽</h4>
       </div>
 
       <div className={styles.row__wrapper}>

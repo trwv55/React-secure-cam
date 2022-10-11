@@ -4,12 +4,20 @@ import Modal from "../../Modal";
 
 const Calculate = () => {
   const [modalWindow, setModalWindow] = useState(false);
-  const [montage, setMontage] = useState(false);
-  const [fullHD, setFullHD] = useState(false);
+  const [checkedValue, setCheckedValue] = useState(0);
 
   const showModal = () => {
     setModalWindow(true);
     document.body.style.overflow = "hidden";
+  };
+
+  const handleChange = (e) => {
+    const { value, checked } = e.target;
+    if (checked) {
+      setCheckedValue((prevState) => prevState + Number(value));
+    } else if (!checked) {
+      setCheckedValue((prevState) => prevState - Number(value));
+    }
   };
   return (
     <div>
@@ -24,8 +32,8 @@ const Calculate = () => {
                   <input
                     className='form-check-input input'
                     type='checkbox'
-                    value={montage}
-                    onChange={() => setMontage(!montage)}
+                    value={3450}
+                    onChange={handleChange}
                     id='flexCheckDefault'
                   />
                   <label className='form-check-label label' htmlFor='flexCheckDefault'>
@@ -36,8 +44,8 @@ const Calculate = () => {
                   <input
                     className='form-check-input input'
                     type='checkbox'
-                    value={fullHD}
-                    onChange={() => setFullHD(!fullHD)}
+                    value={1700}
+                    onChange={handleChange}
                     id='flexCheckChecked'
                   />
                   <label className='form-check-label label' htmlFor='flexCheckChecked'>
@@ -45,7 +53,7 @@ const Calculate = () => {
                   </label>
                 </div>
               </div>
-              <Form montage={montage} fullHD={fullHD} showModal={showModal} />
+              <Form showModal={showModal} checkedValue={checkedValue} />
             </div>
           </div>
         </div>

@@ -5,25 +5,25 @@ import Result from "../Result";
 const Form = ({ showModal, ...props }) => {
   const [numOfCamers, setNumOfCamers] = useState({
     title: "Количество камер",
-    count: 4,
-    price: 5990,
+    name: "numberOfCamers",
+    count: 0,
+    price: 4590,
   });
   const [numOfDays, setNumOfDays] = useState({
     title: "Время хранения",
-    count: 5,
+    name: "numberOfDays",
+    count: 0,
     price: 450,
   });
 
-  const changeNumOfCamers = (vol) => {
-    setNumOfCamers({ ...numOfCamers, count: vol });
+  const changeNumOfCamers = (val, name) => {
+    setNumOfCamers(numOfCamers.name === name ? { ...numOfCamers, count: val } : numOfCamers);
   };
 
-  const changeNumOfDayStorage = (vol) => {
-    setNumOfDays(vol ? { ...numOfDays, count: vol } : numOfDays);
+  const changeNumOfDayStorage = (val, name) => {
+    setNumOfDays(numOfDays.name === name ? { ...numOfDays, count: val } : numOfDays);
   };
 
-  // const [numOfCamers, setNumOfCamers] = useState(4);
-  // const [numOfDays, setNumOfDays] = useState(15);
   return (
     <div className={styles.form__wrapper}>
       <form>
@@ -33,11 +33,10 @@ const Form = ({ showModal, ...props }) => {
             <input
               type='number'
               className={(styles.form__control, styles.form__input)}
-              id='exampleInputEmail1'
+              name='numberOfCamers'
               aria-describedby='emailHelp'
-              placeholder='4'
               value={numOfCamers.count}
-              onChange={(event) => changeNumOfCamers(parseInt(event.target.value)) || 0}
+              onChange={(event) => changeNumOfCamers(event.target.value, event.target.name)}
             />
           </div>
         </div>
@@ -47,15 +46,15 @@ const Form = ({ showModal, ...props }) => {
             <input
               type='number'
               className={(styles.form__control, styles.form__input)}
-              id='exampleInputPassword1'
-              placeholder='15'
+              name='numberOfDays'
               value={numOfDays.count}
-              onChange={(event) => changeNumOfDayStorage(parseInt(event.target.value)) || 0}
+              onChange={(event) => changeNumOfDayStorage(event.target.value, event.target.name)}
             />
           </div>
+          <span>Дней</span>
         </div>
       </form>
-      <Result showModal={showModal} {...props} />
+      <Result numOfCamers={numOfCamers} numOfDays={numOfDays} showModal={showModal} {...props} />
     </div>
   );
 };
