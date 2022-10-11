@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 import styles from "./result.module.scss";
 
-const Result = ({ showModal }) => {
+const Result = ({ showModal, montage, fullHD }) => {
+  const [total, setTotal] = useState(0);
+
+  const calculate = () => {
+    const cameraPrice = 5990;
+    const dayOfStorage = 450;
+    const montagePrice = 2450;
+    const fullHdPrice = 8990;
+
+    let totalPrice = 0;
+  };
   return (
     <div className={styles.result}>
       <div className={styles.info}>

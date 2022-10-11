@@ -48,7 +48,7 @@ const Modal = () => {
           </div>
 
           <div className='choose'>
-            <h4>Почему выбирают нас</h4>
+            <h4>Бизнес выбирает нас </h4>
             <div className='bloks-icons'>
               <div className='block-icon'>
                 <img src='' alt='' />

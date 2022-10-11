@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Form from "../Form";
 import Modal from "../../Modal";
 
-const Calculate = ({ showModal }) => {
+const Calculate = () => {
+  const [modalWindow, setModalWindow] = useState(false);
+  const [montage, setMontage] = useState(false);
+  const [fullHD, setFullHD] = useState(false);
+
+  const showModal = () => {
+    setModalWindow(true);
+    document.body.style.overflow = "hidden";
+  };
   return (
     <div>
       <div className='calculate'>
@@ -16,7 +24,8 @@ const Calculate = ({ showModal }) => {
                   <input
                     className='form-check-input input'
                     type='checkbox'
-                    value=''
+                    value={montage}
+                    onChange={() => setMontage(!montage)}
                     id='flexCheckDefault'
                   />
                   <label className='form-check-label label' htmlFor='flexCheckDefault'>
@@ -27,7 +36,8 @@ const Calculate = ({ showModal }) => {
                   <input
                     className='form-check-input input'
                     type='checkbox'
-                    value=''
+                    value={fullHD}
+                    onChange={() => setFullHD(!fullHD)}
                     id='flexCheckChecked'
                   />
                   <label className='form-check-label label' htmlFor='flexCheckChecked'>
@@ -35,11 +45,12 @@ const Calculate = ({ showModal }) => {
                   </label>
                 </div>
               </div>
-              <Form showModal={showModal} />
+              <Form montage={montage} fullHD={fullHD} showModal={showModal} />
             </div>
           </div>
         </div>
       </div>
+      {modalWindow && <Modal />}
     </div>
   );
 };
