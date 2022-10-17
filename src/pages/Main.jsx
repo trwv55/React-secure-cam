@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Choose from "../components/Choose";
-import Modal from "../components/Modal";
 import CarouselCom from "../components/CarouselCom";
 import Cameras from "../components/Cameras";
 import Calculate from "../components/calculate/Calculate";

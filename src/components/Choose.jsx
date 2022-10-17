@@ -9,21 +9,29 @@ const icons = [
     id: 0,
     icon: First,
     title: "Нет абонентской платы",
+    classImg: "first",
+    classText: "firstText",
   },
   {
     id: 1,
     icon: Second,
     title: "Умный дом в Вашем смартфоне",
+    classImg: "second",
+    classText: "secondText",
   },
   {
     id: 2,
     icon: Third,
     title: "Гарантия 3 года",
+    classImg: "third",
+    classText: "thirdText",
   },
   {
     id: 3,
     icon: Fouth,
     title: "Датчики движения и звука",
+    classImg: "fouth",
+    classText: "fouthText",
   },
 ];
 
@@ -37,8 +45,8 @@ const Choose = () => {
       <div className='icons'>
         {chooseIcons.map((icon) => (
           <div className='col' key={icon.id}>
-            <img src={icon.icon} alt='' />
-            <p className='icons-text'>{icon.title}</p>
+            <img className={`${icon.classImg}`} src={icon.icon} alt='' />
+            <p className={`icons-text ${icon.classText} `}>{icon.title}</p>
           </div>
         ))}
       </div>

@@ -4,7 +4,7 @@
     font-size: 42px;
     line-height: 51px;
     color: $colorText;
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 425px) {
       font-size: 22px;
     }
   }
@@ -15,7 +15,7 @@
   }
   .choose-par {
     margin-top: 30px;
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 425px) {
       display: none;
     }
   }
@@ -24,8 +24,9 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 41.4px;
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 425px) {
       flex-direction: column;
+      margin-top: 30px;
     }
     .col {
       display: flex;
@@ -33,17 +34,27 @@
       justify-content: space-between;
       align-items: center;
       padding-right: 40px;
-      img {
-        @media screen and (max-width: 500px) {
-          width: 50px;
-        }
-      }
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 425px) {
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
         margin-bottom: 15px;
       }
+      img {
+        @media screen and (max-width: 425px) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+      .third {
+        @media screen and (max-width: 425px) {
+          width: 52px;
+          height: 49px;
+          padding-left: 10px;
+        }
+      }
+
       .icons-text {
         font-weight: 400;
         font-size: 22px;
@@ -54,10 +65,26 @@
         justify-content: flex-start;
         margin-top: 30px;
         color: $colorText;
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 425px) {
           font-size: 18px;
           line-height: 21px;
-          padding-left: 30px;
+          text-align: none;
+          padding-left: 23px;
+        }
+      }
+      .secondText {
+        @media screen and (max-width: 425px) {
+          margin-left: -39px;
+        }
+      }
+      .thirdText {
+        @media screen and (max-width: 425px) {
+          margin-left: 20px;
+        }
+      }
+      .fouthText {
+        @media screen and (max-width: 425px) {
+          margin-left: 8px;
         }
       }
     }

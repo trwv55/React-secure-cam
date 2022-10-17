@@ -27,12 +27,7 @@ const CarouselCom = () => {
       <div className='container'>
         <h3>Обезопасим каждую сферу вашей жизни</h3>
         <div className='blocks-wrapper'>
-          <Swiper
-            navigation={true}
-            modules={[Navigation]}
-            slidesPerView={4}
-            spaceBetween={30}
-            className='blocks'>
+          <Swiper navigation={true} modules={[Navigation]} spaceBetween={30} className='blocks'>
             {carouselData.map((slide) => (
               <SwiperSlide className='block' key={slide.id}>
                 <img src={slide.icon} />
