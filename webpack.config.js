@@ -7,6 +7,12 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const production = process.env.NODE_ENV === "production";
 
 module.exports = {
+  entry: "./src/index.js",
+  output: {
+    path: path.resolve(__dirname, "build"),
+    filename: "bundle.js",
+    publicPath: "/",
+  },
   module: {
     rules: [
       {
