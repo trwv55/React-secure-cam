@@ -8,10 +8,16 @@
   margin-left: 245px;
   position: relative;
   min-width: 345px;
+  @media screen and (max-width: 425px) {
+    margin-left: 0;
+  }
   .info {
     display: flex;
     flex-direction: column;
     padding: 10px 0 37px 48px;
+    @media screen and (max-width: 425px) {
+      padding: 10px 0 17px 10px;
+    }
     p {
       font-weight: 400;
       font-size: 14px;
@@ -32,6 +38,9 @@
     flex-direction: column;
     padding-left: 48px;
     margin-bottom: 42px;
+    @media screen and (max-width: 425px) {
+      padding-left: 10px;
+    }
     .row {
       display: flex;
       flex-direction: row;
@@ -56,6 +65,11 @@
     @include btn-blue;
     margin-left: 50px;
     margin-bottom: 56px;
+    @media screen and (max-width: 425px) {
+      width: 295px;
+      height: 48px;
+      margin-left: 20px;
+    }
     &:hover {
       background-color: $btnBlueActive;
     }

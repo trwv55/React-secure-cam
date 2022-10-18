@@ -1,10 +1,17 @@
 .form__wrapper {
   display: flex;
   flex-direction: row;
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .form__group {
     display: flex;
     flex-direction: column;
     padding-bottom: 65px;
+    @media screen and (max-width: 425px) {
+      padding-bottom: 40px;
+    }
     .form__label {
       font-weight: 400;
       font-size: 18px;
@@ -26,6 +33,11 @@
         height: 62px;
         border: 2px solid #aab0bd;
         border-radius: 4px;
+        @media screen and (max-width: 425px) {
+          max-width: 345px;
+          max-height: 52px;
+          margin: 0 auto;
+        }
       }
     }
     span {

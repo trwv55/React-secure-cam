@@ -93,7 +93,7 @@ const Cameras = () => {
                       </div>
                     </div>
                     <div className='price-btn'>
-                      <h3>{item.price}</h3>
+                      <h3 nowrap>{item.price}</h3>
                       <button className='cameras-btn'>Купить</button>
                     </div>
                   </div>

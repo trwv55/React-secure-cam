@@ -6,6 +6,10 @@
     font-weight: 500;
     font-size: 42px;
     line-height: 120%;
+    @media screen and (max-width: 425px) {
+      font-size: 22px;
+      line-height: 24px;
+    }
   }
   p {
     font-weight: 500;
@@ -14,10 +18,17 @@
     margin-top: 30px;
     margin-bottom: 50px;
     color: #5082f4;
+    @media screen and (max-width: 425px) {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
   .form-wrapper {
     display: flex;
     flex-direction: row;
+    @media screen and (max-width: 425px) {
+      padding-left: 20px;
+    }
     .checkbox-form {
       .checkbox-wrapper {
         display: flex;
@@ -40,6 +51,10 @@
             font-size: 20px;
             line-height: 100%;
             color: #333333;
+            @media screen and (max-width: 425px) {
+              font-size: 18px;
+              line-height: 100%;
+            }
           }
         }
       }
