@@ -1,6 +1,8 @@
 .video {
   padding-top: 135px;
-
+  @media screen and (max-width: 425px) {
+    padding-top: 80px;
+  }
   .videoReg {
     margin-bottom: 120px;
     h3 {
@@ -9,11 +11,24 @@
       line-height: 51px;
       letter-spacing: 0.02em;
       margin-bottom: 70px;
+      @media screen and (max-width: 425px) {
+        padding-top: 80px;
+        font-size: 22px;
+        line-height: 27px;
+      }
     }
     .blocks {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+
+      img {
+        @media screen and (max-width: 425px) {
+          width: 345px;
+          height: 452px;
+          padding-right: 30px;
+        }
+      }
     }
   }
 }

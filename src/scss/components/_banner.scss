@@ -11,10 +11,6 @@
     display: flex;
     flex-direction: row;
     position: relative;
-    @media screen and (max-width: 425px) {
-      // flex-direction: column;
-      // flex-flow: wrap;
-    }
     .image {
       img {
         padding-left: 183px;
@@ -24,11 +20,11 @@
         z-index: 0;
         @media screen and (max-width: 425px) {
           padding-left: 0;
-          width: 183px;
-          height: 140px;
+          width: 167px;
+          height: 180px;
           order: 2;
           margin-left: 180px;
-          margin-top: 260px;
+          margin-top: 230px;
         }
       }
     }
@@ -53,6 +49,7 @@
           padding-left: 0;
           font-size: 22px;
           line-height: 105%;
+          padding-top: 40px;
         }
       }
       p {
