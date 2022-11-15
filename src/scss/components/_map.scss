@@ -1,22 +1,42 @@
 .find {
   padding-bottom: 80px;
+  @media screen and (max-width: 425px) {
+    padding-bottom: 30px;
+  }
   .wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @media screen and (max-width: 425px) {
+      flex-direction: column;
+    }
     .info {
       h3 {
         font-weight: 400;
         font-size: 46px;
         line-height: 56px;
         margin-bottom: 43px;
+        @media screen and (max-width: 425px) {
+          font-weight: 500;
+          font-size: 22px;
+          line-height: 24px;
+          margin-bottom: 30px;
+        }
       }
       .office {
+        @media screen and (max-width: 425px) {
+          margin-bottom: 25px;
+        }
         h5 {
           font-weight: 600;
           font-size: 19px;
           line-height: 26px;
           margin-bottom: 15px;
+          @media screen and (max-width: 425px) {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+          }
         }
         .main-office {
           &::before {
@@ -61,6 +81,9 @@
         }
         .sell-office {
           margin-top: 45px;
+          @media screen and (max-width: 425px) {
+            margin-top: 25px;
+          }
           &::before {
             content: url(./assets/images/findUs/sell-of.svg);
             padding-right: 6px;
@@ -80,6 +103,20 @@
     }
     .map {
       margin-right: 80px;
+      @media screen and (max-width: 425px) {
+        margin-top: 30px;
+        margin-right: 0;
+      }
+      iframe {
+        width: 750px;
+        height: 480px;
+        @media screen and (max-width: 425px) {
+          max-width: 375px;
+          width: 100%;
+          min-height: 212px;
+          height: 100%;
+        }
+      }
     }
   }
 }

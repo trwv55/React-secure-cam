@@ -7,12 +7,20 @@ const VideoReg = () => {
       <div className='videoReg'>
         <div className='container'>
           <h3>Видеорегистраторы</h3>
-          <div className='blocks'>
-            <img src={VideoCamera} alt='' />
-            <img src={VideoCamera} alt='' />
-            <img src={VideoCamera} alt='' />
-            <img src={VideoCamera} alt='' />
-          </div>
+          <ul className='blocks'>
+            <li>
+              <img src={VideoCamera} alt='' />
+            </li>
+            <li>
+              <img src={VideoCamera} alt='' />
+            </li>{" "}
+            <li>
+              <img src={VideoCamera} alt='' />
+            </li>{" "}
+            <li>
+              <img src={VideoCamera} alt='' />
+            </li>
+          </ul>
         </div>
       </div>
     </div>

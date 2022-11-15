@@ -28,3 +28,36 @@ body {
   margin-top: 80px;
   flex: 0 0 auto;
 }
+
+@media screen and (max-width: 425px) {
+  .goods__camera .swiper-initialized {
+    max-width: 907px;
+    max-height: 239px;
+  }
+}
+
+.swiper-slide.swiper-slide-visible.swiper-slide-next,
+.swiper-slide.swiper-slide-thumb-active.swiper-slide-visible.swiper-slide-active,
+.swiper-slide.swiper-slide-visible,
+.swiper-slide.swiper-slide-thumb-active.swiper-slide-next,
+.swiper-slide.swiper-slide-visible.swiper-slide-next {
+  max-width: 285px;
+  width: 100%;
+}
+
+.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-free-mode.swiper-watch-progress.mySwiper.swiper-thumbs.swiper-backface-hidden {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+// .swiper-slide {
+//   max-width: 285px;
+//   width: 100%;
+// }
+
+@media screen and (max-width: 425px) {
+  .swiper-slide.swiper-slide-thumb-active.swiper-slide-visible.swiper-slide-active {
+    max-width: 285px;
+    width: 100%;
+  }
+}

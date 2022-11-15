@@ -107,7 +107,7 @@ const Cameras = () => {
             onSwiper={setThumbsSwiper}
             navigation={true}
             spaceBetween={10}
-            slidesPerView={2}
+            slidesPerView={1}
             freeMode={true}
             watchSlidesProgress={true}
             modules={[FreeMode, Navigation, Thumbs]}

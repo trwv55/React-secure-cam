@@ -6,6 +6,8 @@
     color: $colorText;
     @media screen and (max-width: 425px) {
       font-size: 22px;
+      line-height: 24px;
+      max-width: 260px;
     }
   }
   p {
@@ -45,6 +47,7 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
+          flex-basis: 73px;
         }
       }
       .third {
@@ -68,23 +71,28 @@
         @media screen and (max-width: 425px) {
           font-size: 18px;
           line-height: 21px;
-          text-align: none;
-          padding-left: 23px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          text-align: left;
+          flex-basis: 258px;
+          margin-left: 15px;
+          // padding-left: 23px;
         }
       }
       .secondText {
         @media screen and (max-width: 425px) {
-          margin-left: -39px;
+          // margin-left: -39px;
         }
       }
       .thirdText {
         @media screen and (max-width: 425px) {
-          margin-left: 20px;
+          // margin-left: 20px;
         }
       }
       .fouthText {
         @media screen and (max-width: 425px) {
-          margin-left: 8px;
+          // margin-left: 8px;
         }
       }
     }
