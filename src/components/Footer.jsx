@@ -38,7 +38,8 @@ const Footer = () => {
                 8(8888)888-000
               </a>
               <p className='row2 phone'>телефон</p>
-              <a className='row3' href='#'>
+
+              <a className='row3 video' href='#'>
                 Видеонаблюдение
               </a>
               <a className='row4 fire' href='#'>
